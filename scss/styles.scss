@@ -1,0 +1,14 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_grid.scss";
+@import "_oocss-classes.scss";
+
+*{
+  @include border-box();
+}
+
+body{
+  @include disable-spaces();
+  background: $bg-general;
+  font-family: Arial, sans-serif;
+}
