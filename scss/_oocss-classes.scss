@@ -11,15 +11,15 @@
 }
 
 //Text
-
-h1,h2,h3{
-  margin: 1rem 0;
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
 }
 
 .sectiontitle{
-  color: $col-primary;
+  color: $brand-color;
   font-family: "Trebuchet MS";
-  font-size: 2em;
+  font-size: 1.4em;
   font-weight: 600;
   margin: 0 0 4rem 10px;
   text-transform: uppercase;
@@ -34,8 +34,8 @@ h1,h2,h3{
 }
 
 .headline{
-  font-family: $headings;
-  font-size: 9em;
+  font-family: $heading-font-family;
+  font-size: 5em;
   letter-spacing: -.4rem;
   line-height: 85%;
 }

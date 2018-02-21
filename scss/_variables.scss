@@ -1,10 +1,13 @@
 //Colors by name
 $orange: rgb(252, 68, 27);
 $white: rgb(255, 255, 255);
+$gray: rgba(41, 41, 41, 1);
+
 
 //Colors by use
-$bg-general: $white;
-$col-primary: $orange;
+$background-color: $white;
+$brand-color: $orange;
+$base-color: $gray;
 
 //Grid system variables
 $content-width: 1024px;
@@ -13,5 +16,12 @@ $space-col: 20px;
 $space-row: 20px;
 
 //Fonts
+$base-font-size: 16px;
+$heading-font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+$heading-font-weight: 800;
+$body-font-family: 'Georgia', 'Times', 'Times New Roman', serif;
 
-$headings: 'Montserrat', Helvetica, Arial, sans-serif;
+//My RWD Breakpoints
+$break-mobile: 450px;
+$break-medium: 980px;
+$break-xlarge: 1200px;

@@ -83,13 +83,14 @@
   height: auto;
   max-width: 100%; }
 
-h1, h2, h3 {
-  margin: 1rem 0; }
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 800; }
 
 .sectiontitle {
   color: #fc441b;
   font-family: "Trebuchet MS";
-  font-size: 2em;
+  font-size: 1.4em;
   font-weight: 600;
   margin: 0 0 4rem 10px;
   text-transform: uppercase; }
@@ -103,7 +104,7 @@ h1, h2, h3 {
 
 .headline {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  font-size: 9em;
+  font-size: 5em;
   letter-spacing: -.4rem;
   line-height: 85%; }
 
@@ -124,9 +125,31 @@ h1, h2, h3 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
+html {
+  font-size: 16px; }
+
 body {
   margin: 0;
   padding: 0;
   background: white;
-  font-family: Arial, sans-serif;
-  font-size: 16px; }
+  color: #292929;
+  font-family: "Georgia", "Times", "Times New Roman", serif;
+  font-size: 1.8em; }
+  @media only screen and (max-width: 450px) {
+    body {
+      font-size: 1em; } }
+  @media only screen and (min-width: 451px) and (max-width: 979px) {
+    body {
+      font-size: 1.2em; } }
+  @media only screen and (min-width: 981px) and (max-width: 1199px) {
+    body {
+      font-size: 1.5em; } }
+  @media only screen and (min-width: 1200px) {
+    body {
+      font-size: 1.8em; } }
+
+h1, h2, h3 {
+  margin: 1rem 0; }
+
+p {
+  line-height: 1.65em; }

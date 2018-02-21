@@ -8,3 +8,26 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $break-mobile) {
+      @content
+    }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-mobile + 1) and (max-width: $break-medium - 1) {
+      @content;
+    }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $break-medium + 1) and (max-width: $break-xlarge - 1) {
+      @content;
+    }
+  }
+  @else if $media == x-large {
+    @media only screen and (min-width: $break-xlarge) {
+      @content;
+    }
+  }
+}
