@@ -15,7 +15,7 @@ var concat = require('gulp-concat');
 
 //Scripts a concatenar
 var jsScripts = [
-  // 'app/js/ejemplo.js'
+  'scripts/web.js'
 ];
 
 //Concatenar
@@ -36,8 +36,6 @@ gulp.task('sass', function(){
     }))
     .pipe(autoprefixer())
     .pipe(gulp.dest(cssProdDir));
-
-
 });
 
 //Minificando los ficheros CSS
@@ -59,7 +57,7 @@ gulp.task('serve',['sass', 'miniCSS'], function(){
 gulp.task('watch', ['sass', 'miniCSS', 'serve', 'concat'], function(){
   gulp.watch(['scss/*.scss'], ['sass']),
   gulp.watch(['www/css/*.css'], ['miniCSS']),
-  gulp.watch(['www/js/*.js'], ['concat'])
+  gulp.watch(['scripts/*.js'], ['concat'])
 });
 
 gulp.task('default', ['watch']);

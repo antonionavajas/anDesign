@@ -1,3 +1,4 @@
+@import "_fonts.scss";
 @import "_variables.scss";
 @import "_mixins.scss";
 @import "_grid.scss";
@@ -11,4 +12,5 @@ body{
   @include disable-spaces();
   background: $bg-general;
   font-family: Arial, sans-serif;
+  font-size: 16px;
 }

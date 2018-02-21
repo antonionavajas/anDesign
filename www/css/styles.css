@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
 .col-1 {
   float: left;
   padding: 0 10px;
@@ -65,6 +71,10 @@
   overflow: hidden;
   padding: 10px 0; }
 
+.container {
+  margin: 0 auto;
+  width: 1024px; }
+
 .fluid {
   width: 100%; }
 
@@ -72,6 +82,42 @@
   display: block;
   height: auto;
   max-width: 100%; }
+
+h1, h2, h3 {
+  margin: 1rem 0; }
+
+.sectiontitle {
+  color: #fc441b;
+  font-family: "Trebuchet MS";
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0 0 4rem 10px;
+  text-transform: uppercase; }
+  .sectiontitle:before {
+    background: #fc441b;
+    content: " ";
+    height: 4px;
+    top: 2em;
+    position: absolute;
+    width: 80px; }
+
+.headline {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 9em;
+  letter-spacing: -.4rem;
+  line-height: 85%; }
+
+.t-left {
+  text-align: left; }
+
+.t-right {
+  text-align: right; }
+
+.t-center {
+  text-align: center; }
+
+.t-justify {
+  text-align: justify; }
 
 * {
   box-sizing: border-box;
@@ -82,4 +128,5 @@ body {
   margin: 0;
   padding: 0;
   background: white;
-  font-family: Arial, sans-serif; }
+  font-family: Arial, sans-serif;
+  font-size: 16px; }

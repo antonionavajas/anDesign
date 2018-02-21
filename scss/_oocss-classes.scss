@@ -1,3 +1,5 @@
+//Composition
+
 .fluid{
   width: 100%;
 }
@@ -6,4 +8,50 @@
   display: block;
   height: auto;
   max-width: 100%;
+}
+
+//Text
+
+h1,h2,h3{
+  margin: 1rem 0;
+}
+
+.sectiontitle{
+  color: $col-primary;
+  font-family: "Trebuchet MS";
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0 0 4rem 10px;
+  text-transform: uppercase;
+  &:before{
+    background: $orange;
+    content: " ";
+    height: 4px;
+    top: 2em;
+    position: absolute;
+    width: 80px;
+  }
+}
+
+.headline{
+  font-family: $headings;
+  font-size: 9em;
+  letter-spacing: -.4rem;
+  line-height: 85%;
+}
+
+.t-left{
+  text-align: left;
+}
+
+.t-right{
+  text-align: right;
+}
+
+.t-center{
+  text-align: center;
+}
+
+.t-justify{
+  text-align: justify;
 }

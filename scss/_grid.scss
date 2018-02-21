@@ -1,14 +1,14 @@
 @for $i from 1 through $grid-col-num {
   .col-#{$i}{
     float: left;
-    padding: 0 ($space-col/2 + px);
-    width: (100 / $grid-col-num) * $i + %;
+    padding: 0 ($space-col/2);
+    width: (100% / $grid-col-num) * $i;
   }
 }
 
 @for $i from 1 through ($grid-col-num - 1) {
   .off-#{$i}{
-    margin-left: (100 / $grid-col-num) * $i + %;
+    margin-left: (100% / $grid-col-num) * $i;
   }
 }
 
@@ -16,6 +16,10 @@
   clear: both;
   height:  auto;
   overflow: hidden;
-  padding: ($space-row/2 + px) 0;
-  // margin-left: -$grid-col-num + px;
+  padding: ($space-row/2) 0;
+}
+
+.container{
+  margin: 0 auto;
+  width: $content-width;
 }

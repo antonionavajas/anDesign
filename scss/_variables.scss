@@ -4,8 +4,14 @@ $white: rgb(255, 255, 255);
 
 //Colors by use
 $bg-general: $white;
+$col-primary: $orange;
 
 //Grid system variables
+$content-width: 1024px;
 $grid-col-num: 8;
-$space-col: 20;
-$space-row: 20;
+$space-col: 20px;
+$space-row: 20px;
+
+//Fonts
+
+$headings: 'Montserrat', Helvetica, Arial, sans-serif;
