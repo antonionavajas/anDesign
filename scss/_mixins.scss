@@ -9,6 +9,15 @@
   -webkit-box-sizing: border-box;
 }
 
+@mixin negative($property){
+  @if $property == color{
+    color: $background-color;
+  }
+  @if $property == background{
+    background: $brand-color;
+  }
+}
+
 @mixin respond-to($media) {
   @if $media == mobile {
     @media only screen and (max-width: $break-mobile) {

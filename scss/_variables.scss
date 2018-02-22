@@ -1,25 +1,33 @@
-//Colors by name
-$orange: rgb(252, 68, 27);
-$white: rgb(255, 255, 255);
-$gray: rgba(41, 41, 41, 1);
-
-
-//Colors by use
-$background-color: $white;
-$brand-color: $orange;
-$base-color: $gray;
+//Colors
+$background-color: rgb(236, 239, 242);
+$brand-color: rgb(252, 68, 27);
+$base-color: rgb(53, 65, 71);
+$special-color: rgb(128, 122, 115);
 
 //Grid system variables
+$regular-padding: 20px;
 $content-width: 1024px;
 $grid-col-num: 8;
-$space-col: 20px;
-$space-row: 20px;
+$space-col: $regular-padding;
+$space-row: $regular-padding;
 
 //Fonts
 $base-font-size: 16px;
 $heading-font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 $heading-font-weight: 800;
+$subheading-font-family: 'Oswald', 'Trebuchet MS', sans-serif;
 $body-font-family: 'Georgia', 'Times', 'Times New Roman', serif;
+
+//Fonts icons
+$icon-burguer: "\e900";
+$icon-magnify: "\e901";
+$icon-redo: "\e902";
+$icon-undo: "\e903";
+$icon-plus: "\e904";
+$icon-cross: "\e905";
+$icon-reload: "\e906";
+$icon-next: "\e907";
+$icon-back: "\e908";
 
 //My RWD Breakpoints
 $break-mobile: 450px;

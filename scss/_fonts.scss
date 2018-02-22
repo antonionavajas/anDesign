@@ -5,3 +5,89 @@
     font-weight: 800;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../assets/fonts/Oswald-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Oswald-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anDesign';
+    src: url('../assets/fonts/anDesign.eot?12wcj6#iefix') format('embedded-opentype'),
+        url('../assets/fonts/anDesign.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'anDesign' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-burguer {
+  &:before {
+    content: unicode($icon-burguer);
+  }
+}
+
+.icon-magnify {
+  &:before {
+    content: unicode($icon-magnify);
+  }
+}
+
+.icon-redo {
+  &:before {
+    content: unicode($icon-redo);
+  }
+}
+
+.icon-undo {
+  &:before {
+    content: unicode($icon-undo);
+  }
+}
+
+.icon-plus {
+  &:before {
+    content: unicode($icon-plus);
+  }
+}
+
+.icon-cross {
+  &:before {
+    content: unicode($icon-cross);
+  }
+}
+
+.icon-reload {
+  &:before {
+    content: unicode($icon-reload);
+  }
+}
+
+.icon-next {
+  &:before {
+    content: unicode($icon-next);
+  }
+}
+
+.icon-back {
+  &:before {
+    content: unicode($icon-back);
+  }
+}

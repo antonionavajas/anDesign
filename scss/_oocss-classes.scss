@@ -10,6 +10,15 @@
   max-width: 100%;
 }
 
+.background-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 3;
+}
+
 //Text
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $heading-font-family;
@@ -18,18 +27,24 @@
 
 .sectiontitle{
   color: $brand-color;
-  font-family: "Trebuchet MS";
+  font-family: $subheading-font-family;
   font-size: 1.4em;
   font-weight: 600;
   margin: 0 0 4rem 10px;
   text-transform: uppercase;
   &:before{
-    background: $orange;
+    background: $brand-color;
     content: " ";
     height: 4px;
     top: 2em;
     position: absolute;
-    width: 80px;
+    width: 2em;
+  }
+  &.negative{
+    @include negative(color);
+    &:before{
+      @include negative(background);
+    }
   }
 }
 
@@ -38,6 +53,21 @@
   font-size: 5em;
   letter-spacing: -.4rem;
   line-height: 85%;
+  @include respond-to(mobile){
+    font-size: 3em;
+    letter-spacing: -.2rem;
+  }
+  @include respond-to(medium){
+    font-size: 4em;
+    letter-spacing: -.3rem;
+  }
+  @include respond-to(large){
+    font-size: 5em;
+    letter-spacing: -.4rem;
+  }
+  &.negative{
+    @include negative(color);
+  }
 }
 
 .t-left{
@@ -54,4 +84,28 @@
 
 .t-justify{
   text-align: justify;
+}
+
+// Decorations ;D
+
+.bar{
+  background: $special-color;
+  display: inline-block;
+  height: 3px;
+  margin: 0 .5em .3em 0;
+  width: 2em;
+  &.negative{
+    @include negative(background);
+  }
+}
+
+.overlay{
+  background: $brand-color;
+  left: 0;
+  height: 100%;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 6;
 }

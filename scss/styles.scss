@@ -1,5 +1,5 @@
-@import "_fonts.scss";
 @import "_variables.scss";
+@import "_fonts.scss";
 @import "_mixins.scss";
 @import "_grid.scss";
 @import "_oocss-classes.scss";
@@ -13,11 +13,11 @@ html{
 }
 
 body{
-  @include disable-spaces();
   background: $background-color;
   color: $base-color;
   font-family: $body-font-family;
   font-size: 1.8em;
+  @include disable-spaces();
   @include respond-to(mobile){
     font-size: 1em;
   }
@@ -30,12 +30,87 @@ body{
   @include respond-to(x-large){
     font-size: 1.8em;
   }
+  &.negative{
+    @include negative(color);
+    @include negative(background);
+  }
 }
 
 h1,h2,h3{
   margin: 1rem 0;
 }
 
+a{
+  color: $special-color;
+  text-decoration: none;
+}
+
 p{
   line-height: 1.65em;
+}
+
+blockquote{
+  color: $special-color;
+  font-style: italic;
+}
+
+nav{
+  height: 100%;
+  left: 100%;
+  padding: 10%;
+  position: fixed;
+  top: 0;
+  transition: left .3s ease-in;
+  width: 100%;
+  z-index: 5;
+  &.open{
+    left: 0;
+    transition: left .3s ease-in;
+  }
+  .navContainer{
+    height: 100%;
+    left: 0;
+    padding: 10%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 7;
+    ul{
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        a{
+          color: $background-color;
+          display: block;
+          font-family: $heading-font-family;
+          font-size: 2.5em;
+          font-weight: $heading-font-weight;
+          padding: 0 $regular-padding;
+          &::before,
+          &::after{
+            background: $background-color;
+            content: " ";
+            height: 4px;
+            left: -2em;
+            top: .65em;
+            position: absolute;
+            transition: width .2s ease-in;
+            width: 0;
+          }
+          &:hover::before,
+          &:hover::after{
+            transition: width .2s ease-in;
+            width: 2em;
+          }
+          &:hover::after{
+            left: auto;
+            right: -2em;
+          }
+        }
+      }
+    }
+  }
 }
