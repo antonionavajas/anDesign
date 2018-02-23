@@ -10,6 +10,7 @@
 
 html{
   font-size: $base-font-size;
+  hyphens: auto;
 }
 
 body{
@@ -47,6 +48,9 @@ a{
 
 p{
   line-height: 1.65em;
+  &.negative{
+    @include negative(color);
+  }
 }
 
 blockquote{
@@ -55,6 +59,7 @@ blockquote{
 }
 
 nav{
+  display: none;
   height: 100%;
   left: 100%;
   padding: 10%;
@@ -64,6 +69,7 @@ nav{
   width: 100%;
   z-index: 5;
   &.open{
+    display: block;
     left: 0;
     transition: left .3s ease-in;
   }
@@ -112,5 +118,41 @@ nav{
         }
       }
     }
+  }
+}
+
+section{
+  padding: $regular-padding * 3 0 $regular-padding * 3 70px;
+}
+
+.social{
+  background: $background-color;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 70px;
+  z-index: 7;
+  a{
+    color: $base-color;
+    transition: color 0.2s ease-in;
+    display: block;
+    padding: $regular-padding $regular-padding 0 $regular-padding;
+    &:hover{
+      color: $brand-color;
+      transition: color 0.2s ease-in;
+    }
+  }
+  @include respond-to(mobile){
+    width: 50px;
+  }
+  @include respond-to(medium){
+    width: 60px;
+  }
+  @include respond-to(large){
+    width: 70px;
+  }
+  @include respond-to(x-large){
+    width: 70px;
   }
 }

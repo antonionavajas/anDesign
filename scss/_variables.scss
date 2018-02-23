@@ -1,7 +1,7 @@
 //Colors
 $background-color: rgb(236, 239, 242);
 $brand-color: rgb(252, 68, 27);
-$base-color: rgb(53, 65, 71);
+$base-color: #354147;
 $special-color: rgb(128, 122, 115);
 
 //Grid system variables
@@ -19,15 +19,18 @@ $subheading-font-family: 'Oswald', 'Trebuchet MS', sans-serif;
 $body-font-family: 'Georgia', 'Times', 'Times New Roman', serif;
 
 //Fonts icons
-$icon-burguer: "\e900";
-$icon-magnify: "\e901";
-$icon-redo: "\e902";
-$icon-undo: "\e903";
-$icon-plus: "\e904";
-$icon-cross: "\e905";
-$icon-reload: "\e906";
-$icon-next: "\e907";
-$icon-back: "\e908";
+$icon-github: \e909;
+$icon-linkedin: \e90a;
+$icon-twitter: \e90b;
+$icon-burguer: \e900;
+$icon-magnify: \e901;
+$icon-redo: \e902;
+$icon-undo: \e903;
+$icon-plus: \e904;
+$icon-cross: \e905;
+$icon-reload: \e906;
+$icon-next: \e907;
+$icon-back: \e908;
 
 //My RWD Breakpoints
 $break-mobile: 450px;

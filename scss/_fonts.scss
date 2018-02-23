@@ -38,54 +38,61 @@
   @return unquote("\"") + $str + unquote("\"");
 }
 
+.icon-github {
+  &:before {
+    content: unicode($icon-github);
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: unicode($icon-linkedin);
+  }
+}
+.icon-twitter {
+  &:before {
+    content: unicode($icon-twitter);
+  }
+}
 .icon-burguer {
   &:before {
     content: unicode($icon-burguer);
   }
 }
-
 .icon-magnify {
   &:before {
     content: unicode($icon-magnify);
   }
 }
-
 .icon-redo {
   &:before {
     content: unicode($icon-redo);
   }
 }
-
 .icon-undo {
   &:before {
     content: unicode($icon-undo);
   }
 }
-
 .icon-plus {
   &:before {
     content: unicode($icon-plus);
   }
 }
-
 .icon-cross {
   &:before {
     content: unicode($icon-cross);
   }
 }
-
 .icon-reload {
   &:before {
     content: unicode($icon-reload);
   }
 }
-
 .icon-next {
   &:before {
     content: unicode($icon-next);
   }
 }
-
 .icon-back {
   &:before {
     content: unicode($icon-back);

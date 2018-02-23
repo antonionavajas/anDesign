@@ -32,15 +32,7 @@
   font-weight: 600;
   margin: 0 0 4rem 10px;
   text-transform: uppercase;
-  &:before{
-    background: $brand-color;
-    content: " ";
-    height: 4px;
-    top: 2em;
-    position: absolute;
-    width: 2em;
-  }
-  &.negative{
+  .negative{
     @include negative(color);
     &:before{
       @include negative(background);
@@ -53,6 +45,8 @@
   font-size: 5em;
   letter-spacing: -.4rem;
   line-height: 85%;
+  word-wrap: break-word;
+  
   @include respond-to(mobile){
     font-size: 3em;
     letter-spacing: -.2rem;
@@ -108,4 +102,25 @@
   top: 0;
   width: 100%;
   z-index: 6;
+}
+
+.brand-background{
+  background: $brand-color;
+}
+
+.dark-gradient-background{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a1e23+0,354147+97 */
+  background: rgb(26,30,35); /* Old browsers */
+  background: -moz-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%, rgb(53,65,71) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%,rgb(53,65,71) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at left bottom, rgb(26,30,35) 20%,rgb(53,65,71) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.base-background{
+  background:  $background-color;
+}
+
+.special-background{
+  background: $special-color;
 }

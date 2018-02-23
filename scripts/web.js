@@ -1,9 +1,8 @@
-var container, clock;
-var camera, scene, renderer, model;
+var container, clock, camera, scene, renderer, model;
 
 window.onload = function(event){
   AOS.init({
-    duration: 1200,
+    duration: 2400,
   });
   init("3dAnimation");
   animate();
@@ -12,7 +11,7 @@ window.onload = function(event){
 function init(element) {
 	container = document.getElementById( element );
 	camera = new THREE.PerspectiveCamera( 45, container.clientWidth / container.clientWidth, 0.1, 2000 );
-	camera.position.set( 4, 4, 4 );
+	camera.position.set( 3, 3, 3 );
 	camera.lookAt( new THREE.Vector3( 0, 0, 0 ) );
 	scene = new THREE.Scene();
 	clock = new THREE.Clock();
@@ -29,13 +28,11 @@ function init(element) {
 	var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.8 );
 	directionalLight.position.set( 1, 1, 0 ).normalize();
 	scene.add( directionalLight );
-	renderer = new THREE.WebGLRenderer();
+	renderer = new THREE.WebGLRenderer({alpha: true});
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( container.clientWidth, container.clientWidth);
 	container.appendChild( renderer.domElement );
-	scene.background = new THREE.Color("rgb(236, 239, 242)");
 	window.addEventListener( 'resize', onWindowResize, false );
-
 }
 
 function onWindowResize() {

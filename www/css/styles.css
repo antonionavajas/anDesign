@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'Montserrat';
   src: url("../assets/fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Montserrat-ExtraBold.woff") format("woff");
@@ -28,32 +27,41 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-github:before {
+  content: "\e909"; }
+
+.icon-linkedin:before {
+  content: "\e90a"; }
+
+.icon-twitter:before {
+  content: "\e90b"; }
+
 .icon-burguer:before {
-  content: ""; }
+  content: "\e900"; }
 
 .icon-magnify:before {
-  content: ""; }
+  content: "\e901"; }
 
 .icon-redo:before {
-  content: ""; }
+  content: "\e902"; }
 
 .icon-undo:before {
-  content: ""; }
+  content: "\e903"; }
 
 .icon-plus:before {
-  content: ""; }
+  content: "\e904"; }
 
 .icon-cross:before {
-  content: ""; }
+  content: "\e905"; }
 
 .icon-reload:before {
-  content: ""; }
+  content: "\e906"; }
 
 .icon-next:before {
-  content: ""; }
+  content: "\e907"; }
 
 .icon-back:before {
-  content: ""; }
+  content: "\e908"; }
 
 .col-1 {
   float: left;
@@ -153,23 +161,17 @@
   font-weight: 600;
   margin: 0 0 4rem 10px;
   text-transform: uppercase; }
-  .sectiontitle:before {
-    background: #fc441b;
-    content: " ";
-    height: 4px;
-    top: 2em;
-    position: absolute;
-    width: 2em; }
-  .sectiontitle.negative {
+  .sectiontitle .negative {
     color: #eceff2; }
-    .sectiontitle.negative:before {
+    .sectiontitle .negative:before {
       background: #fc441b; }
 
 .headline {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 5em;
   letter-spacing: -.4rem;
-  line-height: 85%; }
+  line-height: 85%;
+  word-wrap: break-word; }
   @media only screen and (max-width: 450px) {
     .headline {
       font-size: 3em;
@@ -216,13 +218,36 @@
   width: 100%;
   z-index: 6; }
 
+.brand-background {
+  background: #fc441b; }
+
+.dark-gradient-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a1e23+0,354147+97 */
+  background: #1a1e23;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at left bottom, #1a1e23 20%, #354147 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+
+.base-background {
+  background: #eceff2; }
+
+.special-background {
+  background: #807a73; }
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
 
 html {
-  font-size: 16px; }
+  font-size: 16px;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; }
 
 body {
   background: #eceff2;
@@ -256,12 +281,15 @@ a {
 
 p {
   line-height: 1.65em; }
+  p.negative {
+    color: #eceff2; }
 
 blockquote {
   color: #807a73;
   font-style: italic; }
 
 nav {
+  display: none;
   height: 100%;
   left: 100%;
   padding: 10%;
@@ -272,6 +300,7 @@ nav {
   width: 100%;
   z-index: 5; }
   nav.open {
+    display: block;
     left: 0;
     -webkit-transition: left .3s ease-in;
     transition: left .3s ease-in; }
@@ -313,3 +342,37 @@ nav {
         nav .navContainer ul li a:hover::after {
           left: auto;
           right: -2em; }
+
+section {
+  padding: 60px 0 60px 70px; }
+
+.social {
+  background: #eceff2;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 70px;
+  z-index: 7; }
+  .social a {
+    color: #354147;
+    -webkit-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
+    display: block;
+    padding: 20px 20px 0 20px; }
+    .social a:hover {
+      color: #fc441b;
+      -webkit-transition: color 0.2s ease-in;
+      transition: color 0.2s ease-in; }
+  @media only screen and (max-width: 450px) {
+    .social {
+      width: 50px; } }
+  @media only screen and (min-width: 451px) and (max-width: 979px) {
+    .social {
+      width: 60px; } }
+  @media only screen and (min-width: 981px) and (max-width: 1199px) {
+    .social {
+      width: 70px; } }
+  @media only screen and (min-width: 1200px) {
+    .social {
+      width: 70px; } }
