@@ -1,19 +1,37 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var container, clock, camera, scene, renderer, model;
+var container, clock, camera, scene, renderer, model, btnMenu;
 
 window.onload = function(event){
   AOS.init({
     duration: 2400,
   });
+  btnMenu = document.getElementById("btnMenu");
+  btnMenu.addEventListener("click", showMenu);
   init("3dAnimation");
   animate();
+}
+
+function showMenu(ev){
+  ev.preventDefault();
+  ev.stopPropagation();
+  var menu = document.getElementById("navMenu");
+  if(hasClass(menu, "open")){
+    menu.classList.remove("open");
+  }else{
+    menu.classList.add("open");
+  }
+  return false;
+}
+
+function hasClass(element, cls) {
+  return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
 
 function init(element) {
 	container = document.getElementById( element );
 	camera = new THREE.PerspectiveCamera( 45, container.clientWidth / container.clientWidth, 0.1, 2000 );
 	camera.position.set( 3, 3, 3 );
-	camera.lookAt( new THREE.Vector3( 0, 0, 0 ) );
+	camera.lookAt( new THREE.Vector3( 0, 0, 0 ));
 	scene = new THREE.Scene();
 	clock = new THREE.Clock();
 	var loadingManager = new THREE.LoadingManager( function() {

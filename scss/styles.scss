@@ -59,24 +59,23 @@ blockquote{
 }
 
 nav{
-  display: none;
   height: 100%;
+  hyphens: none;
   left: 100%;
+  overflow: hidden;
   padding: 10%;
   position: fixed;
   top: 0;
-  transition: left .3s ease-in;
+  transition: left .2s ease-in;
   width: 100%;
   z-index: 5;
   &.open{
-    display: block;
     left: 0;
-    transition: left .3s ease-in;
+    transition: left .2s ease-in;
   }
   .navContainer{
     height: 100%;
     left: 0;
-    padding: 10%;
     position: absolute;
     text-align: center;
     top: 0;
@@ -84,9 +83,14 @@ nav{
     z-index: 7;
     ul{
       display: inline-block;
+      left: 50%;
       list-style: none;
       margin: 0;
       padding: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-90%);
+      z-index: 6;
       li{
         a{
           color: $background-color;

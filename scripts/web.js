@@ -1,18 +1,36 @@
-var container, clock, camera, scene, renderer, model;
+var container, clock, camera, scene, renderer, model, btnMenu;
 
 window.onload = function(event){
   AOS.init({
     duration: 2400,
   });
+  btnMenu = document.getElementById("btnMenu");
+  btnMenu.addEventListener("click", showMenu);
   init("3dAnimation");
   animate();
+}
+
+function showMenu(ev){
+  ev.preventDefault();
+  ev.stopPropagation();
+  var menu = document.getElementById("navMenu");
+  if(hasClass(menu, "open")){
+    menu.classList.remove("open");
+  }else{
+    menu.classList.add("open");
+  }
+  return false;
+}
+
+function hasClass(element, cls) {
+  return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
 }
 
 function init(element) {
 	container = document.getElementById( element );
 	camera = new THREE.PerspectiveCamera( 45, container.clientWidth / container.clientWidth, 0.1, 2000 );
 	camera.position.set( 3, 3, 3 );
-	camera.lookAt( new THREE.Vector3( 0, 0, 0 ) );
+	camera.lookAt( new THREE.Vector3( 0, 0, 0 ));
 	scene = new THREE.Scene();
 	clock = new THREE.Clock();
 	var loadingManager = new THREE.LoadingManager( function() {
