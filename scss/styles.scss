@@ -126,7 +126,7 @@ nav{
 }
 
 section{
-  padding: $regular-padding * 3 0 $regular-padding * 3 70px;
+  padding: $regular-padding  0 $regular-padding 30px;
 }
 
 .social{
@@ -141,7 +141,7 @@ section{
     color: $base-color;
     transition: color 0.2s ease-in;
     display: block;
-    padding: $regular-padding $regular-padding 0 $regular-padding;
+    padding: $regular-padding/2 $regular-padding $regular-padding/2 $regular-padding;
     &:hover{
       color: $brand-color;
       transition: color 0.2s ease-in;

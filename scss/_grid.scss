@@ -1,14 +1,32 @@
-@for $i from 1 through $grid-col-num {
-  .col-#{$i}{
-    float: left;
-    padding: 0 ($space-col/2);
-    width: (100% / $grid-col-num) * $i;
+.full{
+  display: inline-block;
+  padding: $regular-padding * 2 $regular-padding * 8;
+  vertical-align: top;
+  width: 100%;
+  @include respond-to(mobile){
+    width: 100%;
+    padding: $regular-padding * 2 $regular-padding * 2;
+  }
+  @include respond-to(medium){
+    width: 100%;
+    padding: $regular-padding * 2 $regular-padding * 2;
   }
 }
 
-@for $i from 1 through ($grid-col-num - 1) {
-  .off-#{$i}{
-    margin-left: (100% / $grid-col-num) * $i;
+.half{
+  display: inline-block;
+  padding: $regular-padding * 2 $regular-padding * 4;
+  vertical-align: top;
+  width: 50%;
+  @include respond-to(mobile){
+    width: 100%;
+    padding: $regular-padding * 2 $regular-padding * 2;
+
+  }
+  @include respond-to(medium){
+    width: 100%;
+    padding: $regular-padding * 2 $regular-padding * 2;
+
   }
 }
 

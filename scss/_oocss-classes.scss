@@ -45,8 +45,8 @@
   font-size: 5em;
   letter-spacing: -.4rem;
   line-height: 85%;
-  word-wrap: break-word;
-  
+  hyphens: auto;
+
   @include respond-to(mobile){
     font-size: 3em;
     letter-spacing: -.2rem;

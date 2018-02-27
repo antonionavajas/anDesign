@@ -63,66 +63,33 @@
 .icon-back:before {
   content: "\e908"; }
 
-.col-1 {
-  float: left;
-  padding: 0 10px;
-  width: 12.5%; }
-
-.col-2 {
-  float: left;
-  padding: 0 10px;
-  width: 25%; }
-
-.col-3 {
-  float: left;
-  padding: 0 10px;
-  width: 37.5%; }
-
-.col-4 {
-  float: left;
-  padding: 0 10px;
-  width: 50%; }
-
-.col-5 {
-  float: left;
-  padding: 0 10px;
-  width: 62.5%; }
-
-.col-6 {
-  float: left;
-  padding: 0 10px;
-  width: 75%; }
-
-.col-7 {
-  float: left;
-  padding: 0 10px;
-  width: 87.5%; }
-
-.col-8 {
-  float: left;
-  padding: 0 10px;
+.full {
+  display: inline-block;
+  padding: 40px 160px;
+  vertical-align: top;
   width: 100%; }
+  @media only screen and (max-width: 450px) {
+    .full {
+      width: 100%;
+      padding: 40px 40px; } }
+  @media only screen and (min-width: 451px) and (max-width: 979px) {
+    .full {
+      width: 100%;
+      padding: 40px 40px; } }
 
-.off-1 {
-  margin-left: 12.5%; }
-
-.off-2 {
-  margin-left: 25%; }
-
-.off-3 {
-  margin-left: 37.5%; }
-
-.off-4 {
-  margin-left: 50%; }
-
-.off-5 {
-  margin-left: 62.5%; }
-
-.off-6 {
-  margin-left: 75%; }
-
-.off-7 {
-  margin-left: 87.5%; }
+.half {
+  display: inline-block;
+  padding: 40px 80px;
+  vertical-align: top;
+  width: 50%; }
+  @media only screen and (max-width: 450px) {
+    .half {
+      width: 100%;
+      padding: 40px 40px; } }
+  @media only screen and (min-width: 451px) and (max-width: 979px) {
+    .half {
+      width: 100%;
+      padding: 40px 40px; } }
 
 .row {
   clear: both;
@@ -171,7 +138,9 @@
   font-size: 5em;
   letter-spacing: -.4rem;
   line-height: 85%;
-  word-wrap: break-word; }
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto; }
   @media only screen and (max-width: 450px) {
     .headline {
       font-size: 3em;
@@ -351,7 +320,7 @@ nav {
           right: -2em; }
 
 section {
-  padding: 60px 0 60px 70px; }
+  padding: 20px 0 20px 30px; }
 
 .social {
   background: #eceff2;
@@ -366,7 +335,7 @@ section {
     -webkit-transition: color 0.2s ease-in;
     transition: color 0.2s ease-in;
     display: block;
-    padding: 20px 20px 0 20px; }
+    padding: 10px 20px 10px 20px; }
     .social a:hover {
       color: #fc441b;
       -webkit-transition: color 0.2s ease-in;
