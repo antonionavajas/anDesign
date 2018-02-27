@@ -6,8 +6,8 @@ var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var browsersync = require('browser-sync');
 var reload = browsersync.reload;
-var jsProdDir = 'www/js';
-var cssProdDir = 'www/css';
+var jsProdDir = 'www/wp-content/themes/andesign/js';
+var cssProdDir = 'www/wp-content/themes/andesign/css';
 
 //Dependecias
 var browserify = require('gulp-browserify');
@@ -15,7 +15,13 @@ var concat = require('gulp-concat');
 
 //Scripts a concatenar
 var jsScripts = [
-  'scripts/web.js'
+  '/scripts/web.js'
+];
+
+var cssFiles = [
+  'www/wp-conten/andesign/css/normalizer.min.css',
+  'www/wp-conten/andesign/css/aos.min.css',
+  'www/wp-conten/andesign/css/styles.min.css'
 ];
 
 //Concatenar
@@ -40,23 +46,29 @@ gulp.task('sass', function(){
 
 //Minificando los ficheros CSS
 gulp.task('miniCSS', function(){
-  gulp.src(['www/css/*.css', '!www/css/*.min.css'])
+  gulp.src(['css/*.css', '!css/*.min.css'])
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(cssProdDir));
 });
 
-gulp.task('serve',['sass', 'miniCSS'], function(){
-  browsersync.init(['www/css/*.css', 'www/js/*.js', 'www/*.html'],{
+gulp.task('concatCSS', function () {
+  return gulp.src(cssFiles)
+    .pipe(concat("www/wp-content/themes/andesign/style.css"))
+    .pipe(gulp.dest('www/wp-content/themes/andesign/'));
+});
+
+gulp.task('serve', ['sass', 'miniCSS', 'concatCSS', 'concat'], function(){
+  browsersync.init(['css/*.css', 'js/*.js', '*.html', '*.php'],{
     server:{
-      baseDir: 'www'
+      baseDir: 'www/wp-content/themes/andesign/'
     }
   });
 })
 
-gulp.task('watch', ['sass', 'miniCSS', 'serve', 'concat'], function(){
+gulp.task('watch', ['serve'], function(){
   gulp.watch(['scss/*.scss'], ['sass']),
-  gulp.watch(['www/css/*.css'], ['miniCSS']),
+  gulp.watch(['www/wp-content/themes/andesign/css/*.css'], ['miniCSS']),
   gulp.watch(['scripts/*.js'], ['concat'])
 });
 
