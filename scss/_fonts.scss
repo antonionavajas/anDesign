@@ -1,23 +1,23 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url('../assets/fonts/Montserrat-ExtraBold.woff2') format('woff2'),
-        url('../assets/fonts/Montserrat-ExtraBold.woff') format('woff');
+    src: url('./assets/fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('./assets/fonts/Montserrat-ExtraBold.woff') format('woff');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Oswald';
-    src: url('../assets/fonts/Oswald-Regular.woff2') format('woff2'),
-        url('../assets/fonts/Oswald-Regular.woff') format('woff');
+    src: url('./assets/fonts/Oswald-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Oswald-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'anDesign';
-    src: url('../assets/fonts/anDesign.eot?12wcj6#iefix') format('embedded-opentype'),
-        url('../assets/fonts/anDesign.woff') format('woff');
+    src: url('./assets/fonts/anDesign.eot?12wcj6#iefix') format('embedded-opentype'),
+        url('./assets/fonts/anDesign.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

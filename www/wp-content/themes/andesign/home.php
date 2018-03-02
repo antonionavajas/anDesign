@@ -6,7 +6,7 @@
         <div class="row" data-aos="fade-up" data-aos-once="true">
           <div class="full">
             <header>
-              <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+              <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <time datatime="<?php the_time('Y-m-j'); ?>"><?php the_time('j F, Y'); ?></time>
             </header>
             <?php the_excerpt(); ?>

@@ -7,8 +7,10 @@ window.onload = function(event){
   });
   btnMenu = document.getElementById("btnMenu");
   btnMenu.addEventListener("click", showMenu);
-  init("3dAnimation");
-  animate();
+  if(document.getElementById("3dAnimation")){
+    init("3dAnimation");
+    animate();
+  }
 }
 
 function showMenu(ev){
@@ -38,7 +40,7 @@ function init(element) {
 		scene.add( model );
 	} );
 	var loader = new THREE.ColladaLoader( loadingManager );
-	loader.load( '../assets/models/anDesign.dae', function ( collada ) {
+	loader.load( templateUrl + '/assets/models/anDesign.dae', function ( collada ) {
 		model = collada.scene;
 
 	} );

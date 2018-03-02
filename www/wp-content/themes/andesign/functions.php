@@ -23,6 +23,15 @@ function anDesign_async_scripts($url) {
 	return str_replace( '#asyncload', '', $url )."' async='async";
 }
 
+function anDesign_menus() {
+  register_nav_menus(
+    array(
+      'navegation' => __( 'Menú de navegación' ),
+    )
+  );
+}
+
+add_action( 'init', 'anDesign_menus' );
 add_filter( 'clean_url', 'anDesign_async_scripts', 11, 1 );
 add_action("wp_enqueue_scripts", "anDesign_insertar_js");
 

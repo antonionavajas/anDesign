@@ -99,6 +99,7 @@ nav{
           font-size: 2.5em;
           font-weight: $heading-font-weight;
           padding: 0 $regular-padding;
+          position: relative;
           &::before,
           &::after{
             background: $background-color;

@@ -19,9 +19,9 @@ var jsScripts = [
 ];
 
 var cssFiles = [
-  'www/wp-conten/andesign/css/normalizer.min.css',
-  'www/wp-conten/andesign/css/aos.min.css',
-  'www/wp-conten/andesign/css/styles.min.css'
+  'www/wp-content/andesign/css/normalizer.min.css',
+  'www/wp-content/andesign/css/aos.min.css',
+  'www/wp-content/andesign/css/styles.min.css'
 ];
 
 //Concatenar

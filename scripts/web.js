@@ -37,7 +37,7 @@ function init(element) {
 		scene.add( model );
 	} );
 	var loader = new THREE.ColladaLoader( loadingManager );
-	loader.load( '../assets/models/anDesign.dae', function ( collada ) {
+	loader.load( templateUrl + '/assets/models/anDesign.dae', function ( collada ) {
 		model = collada.scene;
 
 	} );

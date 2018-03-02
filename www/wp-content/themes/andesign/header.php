@@ -22,6 +22,13 @@
     <?php wp_head(); ?>
     <script>
       var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+    </script><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114962651-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-114962651-1');
     </script>
   </head>
   <body>
@@ -37,11 +44,6 @@
         <video class="background-video" autoplay poster="" loop>
           <source src="<?php echo get_template_directory_uri(); ?>/assets/video/video.mp4" type="video/mp4">
         </video>
-        <ul>
-          <li data-aos="fade-up" data-aos-delay="0"><a href="#">Inicio</a></li>
-          <li data-aos="fade-up" data-aos-delay="100"><a href="#">Trabajos</a></li>
-          <li data-aos="fade-up" data-aos-delay="200"><a href="#">Blog</a></li>
-          <li data-aos="fade-up" data-aos-delay="300"><a href="#">Contacto</a></li>
-        </ul>
+        <?php wp_nav_menu( array( 'theme_location' => 'navegation', 'container' => '' ) ); ?>
       </div>
     </nav>
