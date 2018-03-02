@@ -43,14 +43,5 @@ testem.log
 Thumbs.db
 
 # Wordpress
-/www/wp-admin
-/www/wp-includes
-/www/wp-content/languages
-/www/wp-content/plugins
-/www/wp-content/index.php
-/www/*.php
-/www/.htaccess
-/www/*.txt
-/www/*.html
-/www/wp-content/themes/index.php
+/www/*
 !/www/wp-content/themes/andesign
