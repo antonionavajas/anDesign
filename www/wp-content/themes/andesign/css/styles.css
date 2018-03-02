@@ -269,10 +269,10 @@ nav {
   top: 0;
   -webkit-transition: left .2s ease-in;
   transition: left .2s ease-in;
-  width: 100%;
+  width: calc(100% - 70px);
   z-index: 5; }
   nav.open {
-    left: 0;
+    left: 70px;
     -webkit-transition: left .2s ease-in;
     transition: left .2s ease-in; }
   nav .navContainer {
@@ -321,7 +321,7 @@ nav {
           right: -2em; }
 
 section {
-  padding: 20px 0 20px 30px; }
+  padding: 20px 20px 20px 90px; }
 
 .social {
   background: #eceff2;
@@ -333,6 +333,7 @@ section {
   z-index: 7; }
   .social a {
     color: #354147;
+    font-size: 28.8px;
     -webkit-transition: color 0.2s ease-in;
     transition: color 0.2s ease-in;
     display: block;
@@ -341,15 +342,15 @@ section {
       color: #fc441b;
       -webkit-transition: color 0.2s ease-in;
       transition: color 0.2s ease-in; }
+
+.blogArticle {
+  background: white;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 60px; }
   @media only screen and (max-width: 450px) {
-    .social {
-      width: 50px; } }
+    .blogArticle {
+      padding: 20px; } }
   @media only screen and (min-width: 451px) and (max-width: 979px) {
-    .social {
-      width: 60px; } }
-  @media only screen and (min-width: 981px) and (max-width: 1199px) {
-    .social {
-      width: 70px; } }
-  @media only screen and (min-width: 1200px) {
-    .social {
-      width: 70px; } }
+    .blogArticle {
+      padding: 40px; } }

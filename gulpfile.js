@@ -61,9 +61,7 @@ gulp.task('concatCSS', function () {
 
 gulp.task('serve', ['sass', 'miniCSS', 'concatCSS', 'concat'], function(){
   browsersync.init(['css/*.css', 'js/*.js', '*.html', '*.php'],{
-    server:{
-      baseDir: 'www/wp-content/themes/andesign/'
-    }
+    proxy: "localhost"
   });
 })
 

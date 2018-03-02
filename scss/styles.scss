@@ -67,10 +67,10 @@ nav{
   position: fixed;
   top: 0;
   transition: left .2s ease-in;
-  width: 100%;
+  width: calc(100% - 70px);
   z-index: 5;
   &.open{
-    left: 0;
+    left: 70px;
     transition: left .2s ease-in;
   }
   .navContainer{
@@ -127,7 +127,7 @@ nav{
 }
 
 section{
-  padding: $regular-padding  0 $regular-padding 30px;
+  padding: $regular-padding  $regular-padding $regular-padding $regular-padding + 70px;
 }
 
 .social{
@@ -140,6 +140,7 @@ section{
   z-index: 7;
   a{
     color: $base-color;
+    font-size: 28.8px;
     transition: color 0.2s ease-in;
     display: block;
     padding: $regular-padding/2 $regular-padding $regular-padding/2 $regular-padding;
@@ -148,16 +149,17 @@ section{
       transition: color 0.2s ease-in;
     }
   }
+}
+
+.blogArticle{
+  background: $article-color;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 60px;
   @include respond-to(mobile){
-    width: 50px;
+    padding: 20px;
   }
   @include respond-to(medium){
-    width: 60px;
-  }
-  @include respond-to(large){
-    width: 70px;
-  }
-  @include respond-to(x-large){
-    width: 70px;
+    padding: 40px;
   }
 }
