@@ -12,6 +12,14 @@ function anDesign_insertar_js(){
   wp_enqueue_script('collada');
   wp_enqueue_script('aos');
   wp_enqueue_script('miscript');
+
+  remove_action('wp_head', 'wp_print_scripts');
+  remove_action('wp_head', 'wp_print_head_scripts', 9);
+  remove_action('wp_head', 'wp_enqueue_scripts', 1);
+
+  add_action('wp_footer', 'wp_print_scripts', 5);
+  add_action('wp_footer', 'wp_enqueue_scripts', 5);
+  add_action('wp_footer', 'wp_print_head_scripts', 5);
 }
 
 function anDesign_async_scripts($url) {
@@ -31,8 +39,9 @@ function anDesign_menus() {
   );
 }
 
+
+
 add_action( 'init', 'anDesign_menus' );
 add_filter( 'clean_url', 'anDesign_async_scripts', 11, 1 );
-add_action("wp_enqueue_scripts", "anDesign_insertar_js");
-
+add_action( 'wp_enqueue_scripts', 'anDesign_insertar_js');
 ?>

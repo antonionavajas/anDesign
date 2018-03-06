@@ -135,23 +135,20 @@
 
 .headline {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  font-size: 5em;
+  font-size: 4em;
   letter-spacing: -.4rem;
-  line-height: 85%;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto; }
+  line-height: 120%; }
   @media only screen and (max-width: 450px) {
     .headline {
-      font-size: 3em;
+      font-size: 2em;
       letter-spacing: -.2rem; } }
   @media only screen and (min-width: 451px) and (max-width: 979px) {
     .headline {
-      font-size: 4em;
+      font-size: 3em;
       letter-spacing: -.3rem; } }
   @media only screen and (min-width: 981px) and (max-width: 1199px) {
     .headline {
-      font-size: 5em;
+      font-size: 4em;
       letter-spacing: -.4rem; } }
   .headline.negative {
     color: #eceff2; }
@@ -161,6 +158,9 @@
 
 .t-right {
   text-align: right; }
+  @media only screen and (max-width: 450px) {
+    .t-right {
+      text-align: left; } }
 
 .t-center {
   text-align: center; }
@@ -191,15 +191,9 @@
   background: #fc441b; }
 
 .dark-gradient-background {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a1e23+0,354147+97 */
   background: #1a1e23;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at left bottom, #1a1e23 20%, #354147 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 ); }
 
 .base-background {
   background: #eceff2; }
@@ -214,9 +208,7 @@
 
 html {
   font-size: 16px;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto; }
+  line-height: 1.6; }
 
 body {
   background: #eceff2;
@@ -242,6 +234,7 @@ body {
     background: #fc441b; }
 
 h1, h2, h3 {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   margin: 1rem 0; }
 
 a {
@@ -249,7 +242,10 @@ a {
   text-decoration: none; }
 
 p {
-  line-height: 1.65em; }
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  line-height: 1.6; }
   p.negative {
     color: #eceff2; }
 
@@ -259,22 +255,23 @@ blockquote {
 
 nav {
   height: 100%;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
   left: 100%;
   overflow: hidden;
   padding: 10%;
   position: fixed;
   top: 0;
-  -webkit-transition: left .2s ease-in;
-  transition: left .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
   width: calc(100% - 70px);
   z-index: 5; }
   nav.open {
     left: 70px;
-    -webkit-transition: left .2s ease-in;
-    transition: left .2s ease-in; }
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in; }
+    @media only screen and (max-width: 450px) {
+      nav.open {
+        left: 0;
+        width: 100%; } }
   nav .navContainer {
     height: 100%;
     left: 0;
@@ -322,6 +319,11 @@ nav {
 
 section {
   padding: 20px 20px 20px 90px; }
+  @media only screen and (max-width: 450px) {
+    section {
+      padding: 20px; }
+      section:first-of-type {
+        padding-top: 50px; } }
 
 .social {
   background: #eceff2;
@@ -331,12 +333,16 @@ section {
   top: 0;
   width: 70px;
   z-index: 7; }
+  @media only screen and (max-width: 450px) {
+    .social {
+      height: 48px;
+      width: 100vw; } }
   .social a {
     color: #354147;
     font-size: 28.8px;
     -webkit-transition: color 0.2s ease-in;
     transition: color 0.2s ease-in;
-    display: block;
+    display: inline-block;
     padding: 10px 20px 10px 20px; }
     .social a:hover {
       color: #fc441b;

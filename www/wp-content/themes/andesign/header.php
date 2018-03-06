@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-Control" content="max-age=3600">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Antonio Navajas es un profesional con más de 11 años de experiencia en el mundo de la publicidad y el desarrollo web y de aplicaciones en dispositivos">
+    <!-- <meta name="description" content="Antonio Navajas es un profesional con más de 11 años de experiencia en el mundo de la publicidad y el desarrollo web y de aplicaciones en dispositivos">
     <meta name="keywords" content="front-end, desarrollo, html5, css3, mobile first, responsive, angular, react" >
     <meta name="author" content="Antonio Navajas Ojeda - antonionavajas.es" >
     <meta property="og:title" content="Antonio Navajas Ojeda - antonionavajas.es">
@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="Antonio Navajas Ojeda -  antonionavajas.es" >
     <meta name="twitter:image" content="./assets/img/logo.png" >
     <meta name="twitter:url" content="www.antonionavajas.es" >
-    <meta name="twitter:card" content="Antonio Navajas es un profesional con más de 11 años de experiencia en el mundo de la publicidad y el desarrollo web y de aplicaciones en dispositivos" >
+    <meta name="twitter:card" content="Antonio Navajas es un profesional con más de 11 años de experiencia en el mundo de la publicidad y el desarrollo web y de aplicaciones en dispositivos" > -->
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
     <?php wp_head(); ?>

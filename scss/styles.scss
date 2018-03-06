@@ -10,7 +10,7 @@
 
 html{
   font-size: $base-font-size;
-  hyphens: auto;
+  line-height: $base-font-line-height;
 }
 
 body{
@@ -37,7 +37,8 @@ body{
   }
 }
 
-h1,h2,h3{
+h1, h2, h3{
+  font-family: $heading-font-family;
   margin: 1rem 0;
 }
 
@@ -47,7 +48,8 @@ a{
 }
 
 p{
-  line-height: 1.65em;
+  hyphens: auto;
+  line-height: $base-font-line-height;
   &.negative{
     @include negative(color);
   }
@@ -60,18 +62,21 @@ blockquote{
 
 nav{
   height: 100%;
-  hyphens: none;
   left: 100%;
   overflow: hidden;
   padding: 10%;
   position: fixed;
   top: 0;
-  transition: left .2s ease-in;
+  transition: all .2s ease-in;
   width: calc(100% - 70px);
   z-index: 5;
   &.open{
     left: 70px;
-    transition: left .2s ease-in;
+    transition: all .2s ease-in;
+    @include respond-to(mobile){
+      left: 0;
+      width: 100%;
+    }
   }
   .navContainer{
     height: 100%;
@@ -128,6 +133,12 @@ nav{
 
 section{
   padding: $regular-padding  $regular-padding $regular-padding $regular-padding + 70px;
+  @include respond-to(mobile){
+    padding: $regular-padding;
+    &:first-of-type{
+      padding-top: $regular-padding + 30px;
+    }
+  }
 }
 
 .social{
@@ -138,11 +149,15 @@ section{
   top: 0;
   width: 70px;
   z-index: 7;
+  @include respond-to(mobile){
+    height: 48px;
+    width: 100vw;
+  }
   a{
     color: $base-color;
     font-size: 28.8px;
     transition: color 0.2s ease-in;
-    display: block;
+    display: inline-block;
     padding: $regular-padding/2 $regular-padding $regular-padding/2 $regular-padding;
     &:hover{
       color: $brand-color;

@@ -42,21 +42,19 @@
 
 .headline{
   font-family: $heading-font-family;
-  font-size: 5em;
+  font-size: 4em;
   letter-spacing: -.4rem;
-  line-height: 85%;
-  hyphens: auto;
-
+  line-height: 120%;
   @include respond-to(mobile){
-    font-size: 3em;
+    font-size: 2em;
     letter-spacing: -.2rem;
   }
   @include respond-to(medium){
-    font-size: 4em;
+    font-size: 3em;
     letter-spacing: -.3rem;
   }
   @include respond-to(large){
-    font-size: 5em;
+    font-size: 4em;
     letter-spacing: -.4rem;
   }
   &.negative{
@@ -70,6 +68,9 @@
 
 .t-right{
   text-align: right;
+  @include respond-to(mobile){
+    text-align: left;
+  }
 }
 
 .t-center{
@@ -109,12 +110,11 @@
 }
 
 .dark-gradient-background{
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1a1e23+0,354147+97 */
-  background: rgb(26,30,35); /* Old browsers */
-  background: -moz-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%, rgb(53,65,71) 100%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%,rgb(53,65,71) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at left bottom, rgb(26,30,35) 20%,rgb(53,65,71) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: rgb(26,30,35); 
+  background: -moz-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%, rgb(53,65,71) 100%); 
+  background: -webkit-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%,rgb(53,65,71) 100%); 
+  background: radial-gradient(ellipse at left bottom, rgb(26,30,35) 20%,rgb(53,65,71) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 ); 
 }
 
 .base-background{
