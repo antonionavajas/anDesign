@@ -53,7 +53,7 @@ gulp.task('miniCSS', function(){
 });
 
 gulp.task('concatCSS', function () {
-  console.log("concatcss?");
+  // console.log("concatcss?");
   return gulp.src(['www/wp-content/themes/andesign/css/normalizer.min.css','www/wp-content/themes/andesign/css/aos.min.css','www/wp-content/themes/andesign/css/styles.min.css'])
     .pipe(concat("style.css"))
     .pipe(gulp.dest('www/wp-content/themes/andesign'));

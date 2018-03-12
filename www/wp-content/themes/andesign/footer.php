@@ -11,8 +11,8 @@
 <nav class="" id="navMenu">
   <div class="navContainer">
     <div class="overlay"></div>
-    <video class="background-video" autoplay poster="" loop>
-      <source src="<?php echo get_template_directory_uri(); ?>/assets/video/video.mp4" type="video/mp4">
+    <video class="background-video" autoplay poster="<?php echo get_template_directory_uri(); ?>/assets/img/poster.jpg" loop>
+      <source src="<?php echo get_template_directory_uri(); ?>/assets/video/video2.mp4" type="video/mp4">
     </video>
     <?php wp_nav_menu( array( 'theme_location' => 'navegation', 'container' => '' ) ); ?>
   </div>

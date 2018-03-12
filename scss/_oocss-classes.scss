@@ -12,7 +12,8 @@
 
 .background-video{
   position: absolute;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
@@ -110,11 +111,11 @@
 }
 
 .dark-gradient-background{
-  background: rgb(26,30,35); 
-  background: -moz-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%, rgb(53,65,71) 100%); 
-  background: -webkit-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%,rgb(53,65,71) 100%); 
-  background: radial-gradient(ellipse at left bottom, rgb(26,30,35) 20%,rgb(53,65,71) 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 ); 
+  background: rgb(26,30,35);
+  background: -moz-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%, rgb(53,65,71) 100%);
+  background: -webkit-radial-gradient(left bottom, ellipse cover, rgb(26,30,35) 20%,rgb(53,65,71) 100%);
+  background: radial-gradient(ellipse at left bottom, rgb(26,30,35) 20%,rgb(53,65,71) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1e23', endColorstr='#354147',GradientType=1 );
 }
 
 .base-background{
@@ -123,4 +124,17 @@
 
 .special-background{
   background: $special-color;
+}
+
+.button{
+  background: $brand-color;
+  color: #FFF !important;
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 3px 10px;
+  transition: all 0.3 ease-in;
+  &:hover{
+    background: darken($brand-color, 20%);
+    transition: all 0.3 ease-in;
+  }
 }

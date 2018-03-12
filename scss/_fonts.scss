@@ -7,10 +7,18 @@
 }
 
 @font-face {
-    font-family: 'Oswald';
-    src: url('./assets/fonts/Oswald-Regular.woff2') format('woff2'),
-        url('./assets/fonts/Oswald-Regular.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Dosis';
+    src: url('./assets/fonts/Dosis-Light.woff2') format('woff2'),
+        url('./assets/fonts/Dosis-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('./assets/fonts/Dosis-SemiBold.woff2') format('woff2'),
+        url('./assets/fonts/Dosis-SemiBold.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
 }
 
