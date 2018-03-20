@@ -296,8 +296,8 @@ html {
 body {
   background: #fafafa;
   color: #424c50;
-  font-family: "Dosis", "Times", "Times New Roman", serif;
-  font-size: 1.8em;
+  font-family: "Georgia", "Times", "Times New Roman", serif;
+  font-size: 1.5em;
   font-weight: 300;
   margin: 0;
   padding: 0; }
@@ -309,10 +309,10 @@ body {
       font-size: 1.2em; } }
   @media only screen and (min-width: 981px) and (max-width: 1199px) {
     body {
-      font-size: 1.5em; } }
+      font-size: 1.3em; } }
   @media only screen and (min-width: 1200px) {
     body {
-      font-size: 1.8em; } }
+      font-size: 1.3em; } }
   body.negative {
     color: #fafafa;
     background: #fc441b; }
@@ -451,25 +451,109 @@ img {
   @media only screen and (min-width: 451px) and (max-width: 979px) {
     .blogArticle {
       padding: 0 0 40px 0; } }
-  .blogArticle > *:not(.thumbnail) {
-    padding: 0 60px; }
+  .blogArticle > p,
+  .blogArticle > h1,
+  .blogArticle > h2,
+  .blogArticle > h3,
+  .blogArticle > h4,
+  .blogArticle > h5,
+  .blogArticle > h6,
+  .blogArticle > ul,
+  .blogArticle > header,
+  .blogArticle > footer {
+    padding: 0 120px; }
     @media only screen and (max-width: 450px) {
-      .blogArticle > *:not(.thumbnail) {
+      .blogArticle > p,
+      .blogArticle > h1,
+      .blogArticle > h2,
+      .blogArticle > h3,
+      .blogArticle > h4,
+      .blogArticle > h5,
+      .blogArticle > h6,
+      .blogArticle > ul,
+      .blogArticle > header,
+      .blogArticle > footer {
         padding: 0 20px; } }
     @media only screen and (min-width: 451px) and (max-width: 979px) {
-      .blogArticle > *:not(.thumbnail) {
-        padding: 0 40px; } }
+      .blogArticle > p,
+      .blogArticle > h1,
+      .blogArticle > h2,
+      .blogArticle > h3,
+      .blogArticle > h4,
+      .blogArticle > h5,
+      .blogArticle > h6,
+      .blogArticle > ul,
+      .blogArticle > header,
+      .blogArticle > footer {
+        padding: 0 60px; } }
   .blogArticle time,
   .blogArticle address {
     font-size: 0.6em; }
   .blogArticle hr {
     border: none;
     border-top: thin solid #e1e1e1; }
-  .blogArticle ul {
-    padding-left: 80px !important; }
-  .blogArticle p a {
-    color: #1a0dab; }
+  .blogArticle > ul {
+    padding-left: 140px !important; }
+    @media only screen and (max-width: 450px) {
+      .blogArticle > ul {
+        padding-left: 40px !important; } }
+    @media only screen and (min-width: 451px) and (max-width: 979px) {
+      .blogArticle > ul {
+        padding-left: 80px !important; } }
+  .blogArticle p a:not(.button) {
+    background: white;
+    border-bottom: 3px solid #fc441b;
+    color: #fc441b; }
+    .blogArticle p a:not(.button):hover {
+      background: #fc441b;
+      border-bottom: none;
+      color: white;
+      -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+      transition: background 0.2s ease-in, color 0.2s ease-in; }
 
 .thumbnail img {
   max-width: 100%;
   height: auto; }
+
+.comment-respond {
+  border-top: thin solid #dddddd;
+  margin-top: 2em;
+  padding-top: 2em; }
+
+.comment-form label {
+  display: block; }
+
+.comment-form input,
+.comment-form textarea {
+  border: thin solid #dddddd;
+  max-width: 100%;
+  width: 100%; }
+
+div#ez-toc-container {
+  border: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 3em 120px; }
+  @media only screen and (max-width: 450px) {
+    div#ez-toc-container {
+      padding: 20px; } }
+  @media only screen and (min-width: 451px) and (max-width: 979px) {
+    div#ez-toc-container {
+      padding: 60px; } }
+  div#ez-toc-container p.ez-toc-title {
+    color: #242424 !important;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-size: 1.2em; }
+  div#ez-toc-container ul.ez-toc-list {
+    padding-left: 40px; }
+    div#ez-toc-container ul.ez-toc-list a, div#ez-toc-container ul.ez-toc-list:visited {
+      background: white !important;
+      border-bottom: 3px solid #fc441b !important;
+      color: #fc441b !important; }
+      div#ez-toc-container ul.ez-toc-list a:hover, div#ez-toc-container ul.ez-toc-list:visited:hover {
+        background: #fc441b !important;
+        border-bottom: none;
+        color: white !important;
+        text-decoration: none !important;
+        -webkit-transition: background 0.2s ease-in, color 0.2s ease-in;
+        transition: background 0.2s ease-in, color 0.2s ease-in; }

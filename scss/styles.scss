@@ -18,7 +18,7 @@ body{
   background: $background-color;
   color: $base-color;
   font-family: $body-font-family;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: $body-font-weight;
   @include disable-spaces();
   @include respond-to(mobile){
@@ -28,10 +28,10 @@ body{
     font-size: 1.2em;
   }
   @include respond-to(large){
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   @include respond-to(x-large){
-    font-size: 1.8em;
+    font-size: 1.3em;
   }
   &.negative{
     @include negative(color);
@@ -186,13 +186,22 @@ img{
   @include respond-to(medium){
     padding: 0 0 40px 0;
   }
-  > *:not(.thumbnail){
-    padding: 0 60px;
+  > p,
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > ul,
+  > header,
+  > footer{
+    padding: 0 120px;
     @include respond-to(mobile){
       padding: 0 20px;
     }
     @include respond-to(medium){
-      padding: 0 40px;
+      padding: 0 60px;
     }
   }
   time,
@@ -203,15 +212,81 @@ img{
     border: none;
     border-top: thin solid darken($background-color, 10%);
   }
-  ul{
-    padding-left: 80px !important;
+  > ul{
+    @include respond-to(mobile){
+      padding-left: 40px !important;
+    }
+    @include respond-to(medium){
+      padding-left: 80px !important;
+    }
+    padding-left: 140px !important;
   }
-  p a{
-    color: #1a0dab;
+  p a:not(.button){
+    background: $article-color;
+    border-bottom: 3px solid $brand-color;
+    color: $brand-color;
+    &:hover{
+      background: $brand-color;
+      border-bottom: none;
+      color: $article-color;
+      transition: background 0.2s ease-in, color 0.2s ease-in;
+    }
   }
 }
 
 .thumbnail img{
   max-width: 100%;
   height: auto;
+}
+
+.comment-respond{
+  border-top: thin solid $thin-border-color;
+  margin-top: 2em;
+  padding-top: 2em;
+}
+
+.comment-form{
+  label{
+    display: block;
+  }
+  input,
+  textarea{
+    border: thin solid $thin-border-color;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// Easy Table of Contents Plugin v1.5
+div#ez-toc-container{
+  border: none !important;
+  box-shadow: none;
+  padding: 3em 120px;
+  @include respond-to(mobile){
+    padding: 20px;
+  }
+  @include respond-to(medium){
+    padding: 60px;
+  }
+  p.ez-toc-title{
+    color: $special-color !important;
+    font-family: $heading-font-family;
+    font-size: 1.2em;
+  }
+  ul.ez-toc-list{
+    padding-left: 40px;
+    a,
+    &:visited{
+      background: $article-color !important;
+      border-bottom: 3px solid $brand-color !important;
+      color: $brand-color !important;
+      &:hover{
+        background: $brand-color !important;
+        border-bottom: none;
+        color: $article-color !important;
+        text-decoration: none !important;
+        transition: background 0.2s ease-in, color 0.2s ease-in;
+      }
+    }
+  }
 }

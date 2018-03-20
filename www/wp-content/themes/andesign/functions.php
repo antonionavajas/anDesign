@@ -41,9 +41,9 @@ function anDesign_menus() {
 }
 
 function anDesign_excerpt_more( $more ) {
-    return sprintf( ' [ ..... ] <hr> <p><a class="button" href="%1$s">%2$s</a></p>',
+    return sprintf( ' [ ..... ] <hr> <p class="t-right"><a class="button" href="%1$s">%2$s</a></p>',
         get_permalink( get_the_ID() ),
-        __( 'Leer completo...', 'textdomain' )
+        __( 'Leer completo <i class="icon-next"></i>', 'textdomain' )
     );
 }
 
